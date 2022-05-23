@@ -32,5 +32,13 @@ describe('Funcionalidade Páginas de Produtos', () => {
             cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
             cy.get('.woocommerce-message').should('contain', quantidade+' × “Argus All-Weather Tank” foram adicionados no seu carrinho.')
 
-    })
+    });
+
+    it('Deve adicionar produtos ao carrinho - usando Comando customizado', () => {
+        cy.addProdutos('Aero Daily Fitness Tee','M', 'Black', '2')
+    });
+
+    it('Deve adicionar produtos ao carrinho - usando Comando customizado', () => {
+        cy.addProdutos('Ariel Roll Sleeve Sweatshirt','XS', 'Red', '5')
+    });
 });
